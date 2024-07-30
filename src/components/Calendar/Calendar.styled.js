@@ -27,18 +27,10 @@ export const ChooseDate = styled.p`
   font-weight: 400;
   line-height: 12px;
   text-align: center;
-  /* Срок исполнения: 09.10.23. */
-  /* position: static;
-  width: 129px;
-  height: 12px; */
-  /* Автолейаут */
   display: flex;
-  /* flex-direction: column; */
   justify-content: flex-start;
   align-items: center;
   padding-left: 8px;
-
-  /* Inside Auto Layout */
   flex: none;
   order: 2;
   flex-grow: 0;

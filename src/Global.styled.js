@@ -63,7 +63,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  color: ${(props) => props.theme.color};
+
 }
 
 .loader {
@@ -78,8 +78,8 @@ body {
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  background-color:
-  ${(props) => props.theme.backgroundColor};
+  /* background-color: */
+
 }
 
 .container {
@@ -117,7 +117,7 @@ body {
 }
 
 .subttl {
-  color: ${(props) => props.theme.subttl};
+
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
@@ -146,7 +146,7 @@ body {
 
 ._active-day {
   background-color: #94A6BE;
-  color: ${(props) => props.theme.backgroundColor} ;
+ 
 }
 
 

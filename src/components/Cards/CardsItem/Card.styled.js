@@ -98,7 +98,7 @@ export const CardContent = styled.div`
 export const CardDate = styled.div`
   /* Frame 1511838628 */
   position: relative;
-  width: 59px;
+  /* width: 59px; */
   height: 13px;
   gap: 6px;
   /* Автолейаут */

@@ -13,8 +13,7 @@ import useUser from "../../../hooks/useUser";
 export default function PopBrowse() {
   const { id } = useParams();
   const { cards, setCards } = useTasks();
-  const currentTask = cards.find((card) => id === card._id);
-  const [selectedDate, setSelectedDate] = useState(currentTask.date);
+  const [selectedDate, setSelectedDate] = useState(null);
   const [isEdit, setIsEdit] = useState(false);
   const navigate = useNavigate();
   const { user } = useUser();
@@ -29,21 +28,23 @@ export default function PopBrowse() {
 
   useEffect(() => {
     if (cards.length) {
-      // const currentTask = cards.find((card) => id === card._id);
+      const currentTask = cards.find((card) => id === card._id);
+      console.log(currentTask)
         if (!currentTask) {
           return navigate(appRoutes.MAIN);
         }
+     
         setNewTask({
           ...newTask,
           title: currentTask.title || "",
           description: currentTask.description ||"",
           topic: currentTask.topic ||"",
           status: currentTask.status || "",
-          date: currentTask.date || "",
         });
+      setSelectedDate(new Date(currentTask.date))
       
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }  }, []);
+    }  }, [cards]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target; // Извлекаем имя поля и его значение
@@ -56,6 +57,9 @@ export default function PopBrowse() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    if (!newTask.title.trim() || !newTask.description.trim() || !newTask.status.trim() || !newTask.topic.trim() || !selectedDate) {
+      return alert("Заполните поля")
+    }
     const taskData = {
       ...newTask,
       date: selectedDate,

@@ -20,6 +20,9 @@ export default function PopNewTask() {
   });
   const handelFormSubmit = async (e) => {
     e.preventDefault();
+    if (!newTask.title.trim() || !newTask.description.trim() || !newTask.topic.trim() || !selectedDate) {
+      return alert("Заполните поля")
+    }
     const taskData = {
       ...newTask,
       date: selectedDate,
