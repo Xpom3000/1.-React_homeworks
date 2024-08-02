@@ -107,7 +107,7 @@ export default function PopBrowse() {
               </CardTopic>
             </S.PopBrouwseTopBlock>
             <S.Status>
-              <p className="status__p subttl">Статус</p>
+              <S.StatusP>Статус</S.StatusP>
               {isEdit ? (
                 <S.StatusThemes>
                   {statusList.map((status) => (

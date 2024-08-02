@@ -146,13 +146,17 @@ export const Status = styled.div`
 
 export const StatusP = styled.div`
   margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 
+  16.41px;
 `;
 
 export const StatusThemes = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  /* align-items: flex-start; */
+  justify-content: space-between;;
 `;
 
 export const RadioStatusLabel = styled.label`
@@ -179,7 +183,7 @@ export const StatusTheme = styled.label `
   border-radius: 23px;
   border: 0.7px solid rgba(148, 166, 190, 0.4);
   color: #94a6be;
-  margin-right: 7px;
+  /* margin-right: 7px; */
   cursor: pointer;
 
   &:hover {
@@ -210,7 +214,7 @@ export const Subttl = styled.label`
 
 export const StatusThemeP = styled.p  `
   display: inline-block;
-  padding: 10px 10px 10px;
+  padding: 10px 16px;
   border-radius: 24px;
   cursor: pointer;
   font-family: Roboto;
@@ -221,7 +225,7 @@ export const StatusThemeP = styled.p  `
 
 export const StatusThemeS = styled.p  `
   display: inline-block;
-  padding: 10px 10px 10px;
+  padding: 10px 17.5px;
   border-radius: 24px;
   cursor: pointer;
   background-color: #94a6be;
