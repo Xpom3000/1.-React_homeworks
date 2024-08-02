@@ -1,18 +1,23 @@
-import * as S from "./Calendar.styled"
+import * as S from "./Calendar.styled";
 import { format } from "date-fns";
 import "react-day-picker/dist/style.css";
 import ru from "date-fns/locale/ru";
 
-export default function Calendar({ disabled, date, selectedDate , setSelectedDate}) {
+export default function Calendar({
+  disabled,
+  date,
+  selectedDate,
+  setSelectedDate,
+}) {
   let footer = (
-    <S.ChooseDate>
-       {!date && <a>Выберите срок исполнения.</a>}{" "}
-    </S.ChooseDate>)
+    <S.ChooseDate>{!date && <a>Выберите срок исполнения.</a>} </S.ChooseDate>
+  );
   if (selectedDate) {
-    footer = 
-    <S.ChooseDate>
-       Срок исполнения: {format(selectedDate, "dd.MM.yy", { locale: ru })}
+    footer = (
+      <S.ChooseDate>
+        Срок исполнения: {format(selectedDate, "dd.MM.yy", { locale: ru })}
       </S.ChooseDate>
+    );
   }
   const css = `
   .my-selected:not([disabled]) { 
@@ -27,6 +32,11 @@ export default function Calendar({ disabled, date, selectedDate , setSelectedDat
   .my-today { 
     font-weight: bold;
   }
+    .rdp-day_selected, .rdp-day_selected:focus-visible, .rdp-day_selected:hover {
+    color: var(--rdp-selected-color);
+    opacity: 1;
+    background-color: var(--rdp-accent-color);
+}
 
   .rdp {
     --rdp-cell-size: 30px;
@@ -38,6 +48,7 @@ export default function Calendar({ disabled, date, selectedDate , setSelectedDat
     --rdp-outline: 2px solid var(--rdp-accent-color);
     --rdp-outline-selected: 3px solid var(--rdp-accent-color);
     --rdp-selected-color: #f4eeee;
+    
   }
 
   .rdp-caption {
@@ -57,23 +68,20 @@ export default function Calendar({ disabled, date, selectedDate , setSelectedDat
 
   return (
     <>
-    <style>{css}</style>
-    <S.Calendaric>
-    <S.CategoriesP>Даты</S.CategoriesP>
-    <S.CalendarCustom
-      mode="single"
-      selected={selectedDate || date}
-      onSelect={disabled ? () => true : setSelectedDate}
-      footer={footer}
-      locale={ru}
-      showOutsideDays="true"
-      minDate={format}
-      disableNavWhenOutRange="true"
-      
-    />
+      <style>{css}</style>
+      <S.Calendaric>
+        <S.CategoriesP>Даты</S.CategoriesP>
+        <S.CalendarCustom
+          mode="single"
+          selected={selectedDate || date}
+          onSelect={disabled ? () => true : setSelectedDate}
+          footer={footer}
+          locale={ru}
+          showOutsideDays="true"
+          minDate={format}
+          disableNavWhenOutRange="true"
+        />
       </S.Calendaric>
-      </>
+    </>
   );
 }
-
-

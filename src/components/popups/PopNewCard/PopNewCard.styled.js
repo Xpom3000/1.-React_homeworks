@@ -186,16 +186,13 @@ export const RadioToolbarInputW = styled.input`
   display: none;
 
   &:checked + label {
-    background-color: #ffe4c2;
-    /* border: 1px solid #ffe4c2; */
+    background-color: #fda940ba;
   }
 `;
 
 export const RadioToolbarLabelW = styled.label`
   display: inline-block;
-  /* padding: 2px 9px; */
   padding: 8px 18px 8px 18px;
-  /* margin: 0px 7px; */
   cursor: pointer;
   border-radius: 24px;
 
@@ -220,14 +217,12 @@ export const RadioToolbarInputR = styled.input`
   display: none;
 
   &:checked + label {
-    background-color: #d0ffb7;
-    /* border: 1px solid #d0ffb7; */
+    background-color: #a0e979e6;
   }
 `;
 
 export const RadioToolbarLabelR = styled.label`
   display: inline-block;
-  /* padding: 2px 9px; */
   padding: 8px 18px 8px 18px;
   margin: 0px 7px;
   border-radius: 24px;
@@ -252,14 +247,12 @@ export const RadioToolbarInputC = styled.input`
   display: none;
 
   &:checked + label {
-    background-color: #e9d4ff;
-    /* border: 1px solid #e9d4ff; */
+    background-color: #9457d3b3;
   }
 `;
 
 export const RadioToolbarLabelC = styled.label`
   display: inline-block;
-  /* padding: 2px 9px; */
   padding: 8px 18px 8px 18px;
   cursor: pointer;
   border-radius: 24px;

@@ -7,7 +7,7 @@ import PrivatRoute from "./components/PrivatRoute/PrivatRoute";
 import MainPage from "./pages/MainPage/MainPage";
 import TaskPage from "./pages/TaskPage/TaskPage";
 import ExitPage from "./pages/ExitPage/ExitPage";
-import "./App.css";
+// import "./App.css";
 import NewCardPage from "./pages/NewTaskPage/NewTaskPage";
 
 export default function App() {
