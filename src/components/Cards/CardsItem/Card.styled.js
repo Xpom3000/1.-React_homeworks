@@ -44,6 +44,10 @@ export const CardsCard = styled(StyledCard)`
   }
 `;
 
+export const CardSkeleton = styled(CardsCard)`
+  margin-top: 15px;
+`;
+
 export const CardGrup = styled.div`
   width: 100%;
   height: 20px;
