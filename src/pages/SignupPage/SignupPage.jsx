@@ -28,14 +28,18 @@ export default function SignupPage() {
   };
 
   const handleLogup = async (e) => {
+    e.preventDefault();
+    if (!registerData.login.trim() || !registerData.name.trim() || !registerData.password.trim()) {
+      return  setRegFormError("Заполните поля");
+    }
     try {
-      e.preventDefault();
+     
       setRegBtnLoading(true);
-      await signUp(registerData).then((data) => {
-        console.log(data)
-        login(data.user);
-        navigate(appRoutes.MAIN);
-      });
+      const data = await signUp(registerData)
+      login(data.user);
+      navigate(appRoutes.MAIN);
+       
+    
     } catch (error) {
       setRegFormError(error.message);
     } finally {
@@ -85,11 +89,9 @@ export default function SignupPage() {
                     backgroundColor: regBtnLoading ? "#94A6BE" : "#565EEF",
                   }}
                 >
-                  <Link to={appRoutes.MAIN}>
                     <S.ModalBtnSignupEnterA>
                       Зарегистрироваться
                     </S.ModalBtnSignupEnterA>
-                  </Link>
                 </S.ModalBtnSignupEnter>
                 <p style={{ color: "red" }}>{regFormError}</p>
                 <S.ModalFormGroup>

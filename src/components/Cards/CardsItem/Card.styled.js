@@ -44,6 +44,10 @@ export const CardsCard = styled(StyledCard)`
   }
 `;
 
+export const CardSkeleton = styled(CardsCard)`
+  margin-top: 15px;
+`;
+
 export const CardGrup = styled.div`
   width: 100%;
   height: 20px;
@@ -54,15 +58,15 @@ export const CardGrup = styled.div`
 `;
 
 export const TopicText = styled.p`
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 14.21px;
+  line-height: 10px;
   text-align: center;
 `;
 
 export const CardTopic = styled.div`
   width: auto;
-  padding: 8px 20px 8px 20px;
+  padding: 5px 15px 5px 15px;
   border-radius: 24px;
   background-color: ${({ $themeColor }) =>
     topicStyles[$themeColor]?.backgroundColor || "#94A6BE"};
@@ -98,7 +102,7 @@ export const CardContent = styled.div`
 export const CardDate = styled.div`
   /* Frame 1511838628 */
   position: relative;
-  width: 59px;
+  /* width: 59px; */
   height: 13px;
   gap: 6px;
   /* Автолейаут */

@@ -24,8 +24,12 @@ export default function SigninPage() {
   };
   
   const handleLogin = async (e) => {
+    e.preventDefault();
+    if (!loginData.login.trim() || !loginData.password.trim()) {
+      return  setRegFormError("Заполните поля");
+    }
     try {
-      e.preventDefault();
+      
       await signIn(loginData).then((data) => {
         login(data.user);
         navigate(appRoutes.MAIN);

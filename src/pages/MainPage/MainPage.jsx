@@ -11,14 +11,14 @@ import { getTodos } from "../../Api";
 import { useTasks } from "../../hooks/useTasks";
 import { statusList } from "../../lib/topic";
 import useUser from "../../hooks/useUser";
-import Loader from "../../components/Loader/Loader";
+// import Loader from "../../components/Loader/Loader";
 // import { Loader} from "../../components/Loader/Loader.jsx"
 
 export default function MainPage() {
   const [theme, setTheme] = useState("light");
   const { user } = useUser();
   const { cards, setCards } = useTasks();
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -32,7 +32,7 @@ export default function MainPage() {
     getTodos({ token: user.token })
       .then((todos) => {
         setCards(todos.tasks);
-        setIsLoading(false);
+        // setIsLoading(false);
       })
       .catch((error) => {
         alert(error);
@@ -44,9 +44,9 @@ export default function MainPage() {
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
           <Outlet />
           <Header toggleTheme={toggleTheme} theme={theme} />
-          {isLoading ? (
+          {/* {isLoading ? (
             <Loader />
-          ) : (
+          ) : ( */}
             <MainContent>
               {statusList.map((status) => (
                 <Column
@@ -56,7 +56,7 @@ export default function MainPage() {
                 />
               ))}
             </MainContent>
-          )}
+          {/* )} */}
         </ThemeProvider>
       </WrapperStyled>
     </>
