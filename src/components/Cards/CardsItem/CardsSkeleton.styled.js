@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { StyledCard } from "../../Column/Column.styled";
 
 export const StyledCardItem = styled.div`
-  padding: 5px;
+  /* padding: 5px; */
   animation-duration: 500ms;
   animation-timing-function: linear;
 `;
 
-export const CardsCard = styled(StyledCard)`
+export const CardSkeleton = styled(StyledCard)`
   width: 220px;
   height: 130px;
   background-color: #ffffff;
@@ -29,10 +29,6 @@ export const CardsCard = styled(StyledCard)`
     justify-content: stretch;
     padding: 15px 13px 19px;
   }
-`;
-
-export const CardSkeleton = styled(CardsCard)`
-  margin-top: 15px;
 `;
 
 export const CardSkeletonHeder = styled.div`
