@@ -58,15 +58,15 @@ export const CardGrup = styled.div`
 `;
 
 export const TopicText = styled.p`
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 14.21px;
+  line-height: 10px;
   text-align: center;
 `;
 
 export const CardTopic = styled.div`
   width: auto;
-  padding: 8px 20px 8px 20px;
+  padding: 5px 15px 5px 15px;
   border-radius: 24px;
   background-color: ${({ $themeColor }) =>
     topicStyles[$themeColor]?.backgroundColor || "#94A6BE"};

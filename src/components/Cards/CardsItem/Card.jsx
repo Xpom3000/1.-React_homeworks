@@ -73,7 +73,7 @@ export default function Cards({ topic, title, date, id }) {
                 </S.CardDateValue>
               </S.CardDate>
             </S.CardContent>
-          </S.CardsCard>
+            </S.CardsCard>
         </S.StyledCardItem>
         
       )}

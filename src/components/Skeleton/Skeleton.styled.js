@@ -10,7 +10,7 @@ import styled from "styled-components";
 export const SkeletonStyled = styled.div`
   width: 100%;
   height: 50px;
-  background: color(srgb 0.81 0.81 0.81 / 0.52);
+  background: #cfcfcf85;
   position: relative;
   /* border: 1px solid red; */
   /* border-radius: 50%; */
@@ -24,7 +24,7 @@ export const SkeletonStyled = styled.div`
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(90deg,  color(srgb 0.81 0.81 0.81 / 0.52) 10%, white 50%, color(srgb 0.81 0.81 0.81 / 0.52) 100% );
+    background: linear-gradient(90deg,  #cfcfcf85 10%, #ffffff 50%, #cfcfcf85 100% );
     animation: skeleton 1s ease-in-out infinite;
   }
 
